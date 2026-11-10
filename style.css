@@ -872,3 +872,166 @@ body {
   font-size: 12px;
   color: #8c8c8c;
 }
+
+
+/* ==========================================
+   Responsive Design & Media Queries
+   ========================================== */
+
+/* Large Laptops / Tablets (Max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 25px 40px 0 40px;
+    height: 85vh;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .movies-section,
+  .filter-section,
+  .footer-section,
+  .categories-bar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .sub-nav {
+    gap: 30px;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+}
+
+/* Tablets & Mobile Devices (Max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20px 24px 0 24px;
+    height: auto;
+    min-height: 80vh;
+  }
+
+  /* Navigation Bar Adjustments */
+  .nav-links {
+    display: none; /* Hide top links; can be linked to a JS mobile menu toggle */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hero-content {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  /* Sub Nav Scrollable on Mobile */
+  .sub-nav {
+    gap: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 12px;
+  }
+  .sub-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide Slider Arrows on Mobile for Native Drag/Swipe */
+  .slider-arrow {
+    display: none;
+  }
+
+  .movies-section,
+  .filter-section,
+  .footer-section,
+  .categories-bar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Movie Cards scaling for smaller screens */
+  .movie-card {
+    flex: 0 0 140px;
+  }
+
+  .poster-wrapper {
+    height: 190px;
+  }
+
+  .movie-title {
+    font-size: 13px;
+  }
+
+  /* Filter Section Adjustments */
+  .content-nav-bar {
+    gap: 20px;
+    font-size: 13px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .sort-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Footer layout shift to single column */
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+  }
+}
+
+/* Small Mobile Screens (Max-width: 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .meta-data {
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .movie-card {
+    flex: 0 0 125px;
+  }
+
+  .poster-wrapper {
+    height: 170px;
+  }
+}
