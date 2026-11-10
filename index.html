@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Land</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Main Background Image -->
+        <img class="hero-bg" src="SaveMe (1).jpg" alt="Save Me Poster">
+
+        <!-- Dark Overlay for Readability -->
+        <div class="overlay"></div>
+
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <div class="logo">Movie land <br><span> Entertainment</span></div>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Profile</a>
+                <a href="#">Drama</a>
+                <a href="#">Movie</a>
+                <a href="#">Help</a>
+            </nav>
+            <div class="hamburger-menu">
+                <!-- <i class="fa-solid fa-bars"></i>
+      </div> -->
+        </header>
+
+        <!-- Main Content Info -->
+        <div class="hero-content">
+            <p class="season-info">SEASON 1 • 16 EPISODE</p>
+
+            <div class="meta-data">
+                <span class="rating"><i class="fa-solid fa-star"></i> 9.1</span>
+                <span class="year">2017</span>
+                <span class="dot">•</span>
+                <span class="tags">Exciting story</span>
+                <span class="dot">•</span>
+                <span class="seasons-count">2 season</span>
+            </div>
+
+            <h1 class="title">SAVE ME</h1>
+
+            <p class="description">
+                Series adapted from the webcomic entitled Out of the World by writer Jo Geum-san.
+            </p>
+
+            <div class="action-buttons">
+                <button class="btn btn-watch"><i class="fa-solid fa-play"></i> WATCH</button>
+                <button class="btn btn-add"><i class="fa-solid fa-plus"></i> ADD LIST</button>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <span class="dot-indicator"></span>
+            <span class="dot-indicator active"></span>
+            <span class="dot-indicator"></span>
+        </div>
+
+        <!-- Sub Navigation Bar -->
+        <div class="sub-nav">
+            <div class="sub-nav-item active">
+                <i class="fa-solid fa-chart-line"></i> Trends Now
+            </div>
+            <div class="sub-nav-item">
+                <i class="fa-solid fa-fire"></i> Popular
+            </div>
+            <div class="sub-nav-item">
+                <i class="fa-solid fa-star"></i> Premium
+            </div>
+            <div class="sub-nav-item">
+                <i class="fa-solid fa-plus"></i> Recently Added
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Bar Section -->
+    <section class="categories-bar">
+        <button class="category-btn active">Action</button>
+        <button class="category-btn">Adventure</button>
+        <button class="category-btn">Biography</button>
+        <button class="category-btn active">Crime</button>
+        <button class="category-btn">Comedy</button>
+        <button class="category-btn">Documentary</button>
+        <button class="category-btn active">Drama</button>
+        <button class="category-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+    </section>
+
+
+    <!-- Movies Section / Grid -->
+    <section class="movies-section-wrapper">
+        <!-- Left Navigation Arrow -->
+        <button class="slider-arrow left-arrow" id="slideLeft">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="movies-section" id="moviesSlider">
+            <div class="movies-grid">
+
+                <!-- Card 1: The Glory -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="The Glory (2022).jpg" alt="The Glory">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Glory</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2022</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Vincenzo -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Vincenzo.jpg" alt="Vincenzo">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Vincenzo</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2021</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 8.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tomorrow -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="TOMORROW.jpg" alt="Tomorrow">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Tomorrow</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2022</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sweet Home -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="sweethom.jpg" alt="Sweet Home">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Sweet Home</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Flower Of Evil -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="flower.jpg" alt="Flower Of Evil">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Flower Of Evil</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 8.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Lawless Lawyer -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Lawless Lawyer Episode's 16.jpg" alt="Lawless Lawyer">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Lawless Lawyer</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2018</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 9.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: My Name -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="my name.jpg" alt="My Name">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">My Name</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2021</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Lioness -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Special Ops_ Lioness (2023).jpg" alt="Lioness">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Lioness</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: terminal list -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="🎥NEw Series (2026)🔥__Name _ The Terminal List….jpg" alt="Lioness">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Terminal List</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Navigation Arrow -->
+        <button class="slider-arrow right-arrow" id="slideRight">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+
+    </div>
+    </section>
+
+
+
+    <!-- Filter & Navigation Section -->
+    <section class="filter-section">
+
+        <!-- Top Navigation Tabs (Movies, Series, Original Series, Search) -->
+        <div class="content-nav-bar">
+            <div class="nav-tab active">
+                <i class="fa-solid fa-film"></i> Movies
+                <span class="active-dot"></span>
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-clapperboard"></i> Series
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-check"></i> Original Series
+            </div>
+            <div class="nav-search">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </div>
+        </div>
+
+        <div class="divider-line"></div>
+
+        <!-- Genre Chips Row -->
+        <div class="categories-bar">
+            <button class="category-btn active">Action</button>
+            <button class="category-btn">Adventure</button>
+            <button class="category-btn">Biography</button>
+            <button class="category-btn active">Crime</button>
+            <button class="category-btn">Comedy</button>
+            <button class="category-btn">Documentary</button>
+            <button class="category-btn active">Drama</button>
+            <button class="category-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Sorting and Rating Filter Controls -->
+        <div class="sort-filter-bar">
+            <div class="sort-group">
+                <span class="sort-label">Sort by:</span>
+                <button class="sort-btn active">Latest</button>
+                <button class="sort-dropdown-btn">Year <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="sort-dropdown-btn">A-z <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+
+            <!-- Rating Slider Control -->
+            <div class="rating-filter">
+                <i class="fa-solid fa-star star-icon"></i>
+                <div class="rating-slider-track">
+                    <div class="rating-slider-fill"></div>
+                </div>
+                <span class="rating-value">6.3</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Second Movie Row Section -->
+    <section class="movies-section-wrapper">
+        <!-- CSS-Only Navigation Arrows -->
+        <button class="slider-arrow left-arrow"
+            onclick="document.getElementById('moviesSlider2').scrollBy({left: -380, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="movies-section" id="moviesSlider2">
+            <div class="movies-grid">
+
+                <!-- Card 1: One Ordinary Day -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="one ordinary day.jpg" alt="One Ordinary Day">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">One Ordinary Day</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2021</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 8.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: The Call -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="The call (2020) - Lee Chung-hyeon.jpg" alt="The Call">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Call</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 7.1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: The Witch -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="speed.jpg" alt="speed">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Speed</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2021</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 8.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: fast x -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Fast X Fast and Furious 10.jpg" alt="fast x">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Fast X</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2021</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Alive -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Mortal Kombat_ Shaolin Monks.jpg" alt="Alive">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mortal Kombat</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Alive -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="In the Grey (2026).jpg" alt="grey">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">In The Grey</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 7: From -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="FROM.jpg" alt="from">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">FROM</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Silo -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="Silo (S1).jpg" alt="from">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Silo</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: elle -->
+                <div class="movie-card">
+                    <div class="poster-wrapper">
+                        <img src="NEW SERIES🎥🍿(2026)__Name _ Elle __Season 01….jpg" alt="from">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Elle</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2020</span>
+                            <div class="meta-right">
+                                <i class="fa-solid fa-heart icon-btn"></i>
+                                <i class="fa-solid fa-eye icon-btn"></i>
+                                <span class="movie-rating"><i class="fa-solid fa-star"></i> 6.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="slider-arrow right-arrow"
+            onclick="document.getElementById('moviesSlider2').scrollBy({left: 380, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <!-- Top Horizontal Border Line -->
+        <div class="footer-divider"></div>
+
+        <div class="footer-container">
+            <!-- Column 1: Resource -->
+            <div class="footer-col">
+                <h4 class="footer-title">Resource</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About, Blockbuster,</a></li>
+                    <li><a href="#">Contact US,</a></li>
+                    <li><a href="#">Movie Land</a></li>
+                    <li><a href="#">Blog, Help Center.</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Legal -->
+            <div class="footer-col">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Privacy Police</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Account -->
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">User Guide</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: NewsLetter -->
+            <div class="footer-col">
+                <h4 class="footer-title">NewsLetter</h4>
+                <p class="footer-text">
+                    Subscribe to our newsletter system now to get latest news from us
+                </p>
+            </div>
+
+            <!-- Column 5: Brand / Contact Info -->
+            <div class="footer-col footer-brand-col">
+                <h4 class="footer-brand-title">ML Entertainment</h4>
+                <p class="footer-contact">Call us (+234) 807 6244 752</p>
+                <p class="footer-copyright">&copy;2026 All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+
+</body>
+
+</html>

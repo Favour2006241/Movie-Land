@@ -1,0 +1,874 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 60px 0 60px;
+}
+
+/* Background Image Element */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Gradient Overlay over Background Image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.7) 40%, rgba(11, 11, 11, 0.1) 100%),
+    linear-gradient(0deg, rgba(11, 11, 11, 1) 0%, rgba(11, 11, 11, 0) 50%);
+  z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #dfdcdc;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a0a0a0;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.hamburger-menu {
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 450px;
+  margin-top: 40px;
+}
+
+.season-info {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #b0b0b0;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.meta-data {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+.rating {
+  color: #f5c518;
+  font-weight: 700;
+}
+
+.rating i {
+  font-size: 11px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 14px;
+  color: #c0c0c0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-watch,
+.btn-add {
+  background-color: #059f1a;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot-indicator {
+  width: 25px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.dot-indicator.active {
+  background-color: #ffffff;
+}
+
+/* Sub Navigation */
+.sub-nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+}
+
+.sub-nav-item {
+  color: #6c6c6c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.sub-nav-item.active {
+  color: #ffffff;
+}
+
+.sub-nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #e50914;
+  border-radius: 50%;
+}
+
+/* Categories Bar */
+.categories-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 60px;
+  background-color: #0b0b0b;
+}
+
+.category-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-btn.active {
+  background-color: #e50914;
+}
+
+.category-arrow {
+  background: transparent;
+  border: none;
+  color: #6c6c6c;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+/* Outer Wrapper for Arrows & Slider */
+.movies-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #0b0b0b;
+}
+
+/* Arrow Navigation Buttons */
+.slider-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.slider-arrow:hover {
+  background-color: #e50914;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+/* Movies Scroll Container */
+.movies-section {
+  padding: 10px 60px 50px 60px;
+  background-color: #0b0b0b;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide Scrollbars */
+.movies-section::-webkit-scrollbar {
+  display: none;
+}
+
+.movies-section {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Row Layout */
+.movies-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: max-content;
+}
+
+/* Movie Cards */
+.movie-card {
+  flex: 0 0 170px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Rounded Poster Styling */
+.poster-wrapper {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #1a1a1a;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Movie Info */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Metadata */
+.movie-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.movie-year {
+  font-weight: 500;
+}
+
+.meta-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  font-size: 11px;
+  color: #8c8c8c;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.icon-btn:hover {
+  color: #e50914;
+}
+
+.movie-rating {
+  color: #0da40a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.movie-rating i {
+  font-size: 10px;
+}
+
+
+
+/* Filter Section Wrapper */
+.filter-section {
+  background-color: #0b0b0b;
+  padding: 20px 60px;
+  color: #ffffff;
+}
+
+/* Content Navigation Bar (Movies, Series, etc.) */
+.content-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6c6c6c;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.content-nav-bar .nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.content-nav-bar .nav-tab.active {
+  color: #ffffff;
+}
+
+.active-dot {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #0c7e0e;
+  border-radius: 50%;
+}
+
+.nav-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #6c6c6c;
+  transition: color 0.3s;
+}
+
+.nav-search:hover,
+.content-nav-bar .nav-tab:hover {
+  color: #ffffff;
+}
+
+/* Divider Line */
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Categories / Genre Chips Bar */
+.categories-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.categories-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.category-btn.active {
+  background-color: #0abb19;
+}
+
+.category-arrow {
+  background: transparent;
+  border: none;
+  color: #6c6c6c;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Sort and Filter Bar */
+.sort-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-label {
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+.sort-btn {
+  background-color: #15a308;
+  border: none;
+  color: #ffffff;
+  padding: 6px 18px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sort-dropdown-btn {
+  background-color: #1a1a1a;
+  border: none;
+  color: #cccccc;
+  padding: 6px 16px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s;
+}
+
+.sort-dropdown-btn:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Rating Bar / Slider */
+.rating-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.star-icon {
+  color: #f5c518;
+  font-size: 14px;
+}
+
+.rating-slider-track {
+  width: 120px;
+  height: 4px;
+  background-color: #333333;
+  border-radius: 2px;
+  position: relative;
+}
+
+.rating-slider-fill {
+  width: 65%; /* Adjust percentage to fill rating visually */
+  height: 100%;
+  background-color: #f5c518;
+  border-radius: 2px;
+}
+
+.rating-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+/* Outer Wrapper for Arrows & Slider */
+.movies-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #0b0b0b;
+}
+
+/* Arrow Navigation Buttons (Pure HTML/CSS inline smooth-scroll trigger) */
+.slider-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.slider-arrow:hover {
+  background-color: #e50914;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* Movies Scroll Container with Native Slide Effect */
+.movies-section {
+  padding: 10px 60px 40px 60px;
+  background-color: #0b0b0b;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbars for a clean look */
+.movies-section::-webkit-scrollbar {
+  display: none;
+}
+.movies-section {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Row Layout */
+.movies-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: max-content;
+}
+
+/* Movie Card Style */
+.movie-card {
+  flex: 0 0 170px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Poster Styling */
+.poster-wrapper {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #1a1a1a;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Movie Info */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Metadata */
+.movie-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.movie-year {
+  font-weight: 500;
+}
+
+.meta-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  font-size: 11px;
+  color: #8c8c8c;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.icon-btn:hover {
+  color: #e50914;
+}
+
+.movie-rating {
+  color: #f5c518;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.movie-rating i {
+  font-size: 10px;
+}
+
+
+/* Footer Section */
+.footer-section {
+  background-color: #0b0b0b;
+  padding: 20px 60px 40px 60px;
+  color: #8c8c8c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Divider Line */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 35px;
+}
+
+/* Footer Grid Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Column Titles */
+.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #8c8c8c;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+  color: #ffffff;
+}
+
+/* Newsletter Texts */
+.footer-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #8c8c8c;
+  max-width: 220px;
+}
+
+.footer-subtext {
+  font-size: 11px;
+  color: #6c6c6c;
+  margin-top: 5px;
+}
+
+/* Brand & Copyright Column */
+.footer-brand-col {
+  flex: 1.2;
+}
+
+.footer-brand-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer-contact {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-bottom: 15px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #8c8c8c;
+}
